@@ -27,7 +27,7 @@ const LoanOfferDetail = ({ title, value }) => (
 
 const LoanOfferDetails = ({ offer }) => (
   <Grid container spacing={2}>
-    <LoanOfferDetail title="Amount" value={CurrencyFormatter.convertToRupeesText(offer.amount)} />
+    <LoanOfferDetail title="Amount" value={CurrencyFormatter.convertToCurrencyText(offer.amount, offer.currencyType)} />
     <LoanOfferDetail title="Interest" value={offer.interestRate} />
   </Grid>
 );
@@ -87,6 +87,7 @@ const extractOfferInfo = (provider) => ({
   imageUrl: provider.descriptor.images[0].url,
   websiteUrl: provider.descriptor.websiteUrl,
   amount: provider.items[0].tags[0].list.find((tag) => tag.descriptor.code === 'MAX_LOAN_AMOUNT').value,
+  currencyType: provider.currency_type,
 });
 
 const LoanOfferScreen = () => {
