@@ -43,7 +43,8 @@ const LoanOfferV2 = ({ offer }) => (
   >
     <Grid container>
       <Grid item xs={2} md={2}>
-        <img src={offer.imageUrl} alt={offer.lenderName} style={{ width: '50%' }} />
+        {/* <img src={offer.imageUrl} alt={offer.lenderName} style={{ width: '50%' }} /> */}
+        <img src={offer.imageUrl} alt={offer.lenderName} style={{ width: offer.imageSize === 'lg' ? '100%' : '50%' }} />
       </Grid>
       <Grid item xs={6} md={6}>
         <Grid container gap="10px">
@@ -85,6 +86,7 @@ const extractOfferInfo = (provider) => ({
   lenderName: provider.descriptor.long_desc,
   interestRate: provider.items[0].tags[0].list.find((tag) => tag.descriptor.code === 'MIN_INTEREST_RATE').value,
   imageUrl: provider.descriptor.images[0].url,
+  imageSize: provider.descriptor.images[0].size_type,
   websiteUrl: provider.descriptor.websiteUrl,
   amount: provider.items[0].tags[0].list.find((tag) => tag.descriptor.code === 'MAX_LOAN_AMOUNT').value,
   currencyType: provider.currency_type,

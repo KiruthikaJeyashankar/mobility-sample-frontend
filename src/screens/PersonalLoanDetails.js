@@ -27,7 +27,7 @@ const DetailsBox = ({ navigateToLoanOffer }) => {
     },
     {
       image: <ImageSearchOutlinedIcon style={{ fontSize: '40px', color: '#4882C4' }} />,
-      text: 'Verify your identity through Aadhaar authentication for secure processing.',
+      text: 'Verify your identity through National ID authentication for secure processing.',
       number: 2,
     },
     {
@@ -67,14 +67,14 @@ const DetailsBox = ({ navigateToLoanOffer }) => {
                 style={{ textAlign: 'left', padding: '10px', color: '#3B3B3B' }}
                 fontSize="15px"
               >
-                Welcome to [Company Name] on the ONDC
+                Welcome on the Beckn
                 platform, where
                 {' '}
                 <b>
                   we bring seamless lending solutions right to your
                   fingertips
                 </b>
-                . As part of ONDC, we’re making it easier than ever to
+                . As part of Beckn, we’re making it easier than ever to
                 access the funds you need, whether you’re a small business owner
                 looking to expand or an individual seeking personal finance options.
               </Typography>
@@ -89,7 +89,7 @@ const DetailsBox = ({ navigateToLoanOffer }) => {
             </Grid>
             <Grid item>
               <Typography variant="body1" fontSize="15px" style={{ textAlign: 'left', padding: '10px', color: '#3B3B3B' }}>
-                Discover how easy it is to secure a loan with us on ONDC –
+                Discover how easy it is to secure a loan with us on Beckn –
                 empowering you to grow, innovate, and achieve your financial
                 goals.
               </Typography>

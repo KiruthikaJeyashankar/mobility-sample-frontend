@@ -23,11 +23,17 @@ const Header = ({ onBackClick }) => (
     )}
 
     <Grid item marginLeft={2}>
-      <img
+      {/* <img
         height={50}
         width={95}
         src="https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/image--6-/1665032253.png"
         alt="ONDC"
+      /> */}
+      <img
+        height={50}
+        width={95}
+        src="https://becknprotocol.io/wp-content/themes/becknprotocol/images/global/logo/beckn.svg"
+        alt="beckn"
       />
     </Grid>
     <Grid marginLeft="auto" marginRight={3}>
